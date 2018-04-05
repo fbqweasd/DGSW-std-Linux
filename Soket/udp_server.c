@@ -24,7 +24,7 @@ int main(int agec, char ** argv)
 		strcat(mesg, "from server");
 		sendto(sockfd, mesg, n + 11, 0, (struct sockaddr *)&cliaddr, sizeof(cliaddr));
 		mesg[n]='\0';
-		printf("data : &s\n mesg_len=%d",mesg,strlen(mesg));
+		printf("data : %s\n mesg_len=%d\n",mesg,strlen(mesg));
 	} while (!strlen(mesg));
 	close(sockfd);
 	return 0;
